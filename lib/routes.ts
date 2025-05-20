@@ -3,11 +3,12 @@ import { ComandaRoutes } from "./modules/comanda/routes/comanda.routes";
 
 export class Routes {
 
-    private comandaRoutes: comandaRoutes = new comandaRoutes();
+    private comandaRoutes: ComandaRoutes = new ComandaRoutes();
     private usuarioRoutes: UsuarioRoutes = new UsuarioRoutes();
 
     public routes(app): void {
         this.usuarioRoutes.routes(app);
         this.comandaRoutes.routes(app);
+        
     }
 }
