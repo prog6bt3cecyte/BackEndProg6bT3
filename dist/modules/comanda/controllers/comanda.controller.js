@@ -6,7 +6,8 @@ class ComandaController {
     constructor() {
         this.crearComanda = (req, res) => {
             const nuevaComanda = new comanda_models_1.default({
-                comanda: req.body.comanda
+                comanda: req.body.comanda,
+                user: req.body.user
             });
             nuevaComanda.save()
                 .then(comandaCreada => {

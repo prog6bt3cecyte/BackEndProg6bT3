@@ -7,6 +7,10 @@ const ComandaSchema = new Schema({
         type: String,
         required: [true, 'comanda required'],
         unique: true
+    },
+    user: {
+        type: String,
+        required: [true, 'user required'],
     }
 });
 const Comanda = mongoose.model("Comanda", ComandaSchema);
