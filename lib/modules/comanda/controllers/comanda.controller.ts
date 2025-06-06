@@ -5,7 +5,8 @@ import Comanda from '../models/comanda.models';
 export class ComandaController {
     crearComanda = (req: Request, res: Response) =>  {
         const nuevaComanda = new Comanda({
-            comanda: req.body.comanda
+            comanda: req.body.comanda,
+            user: req.body.user
         });
 
         nuevaComanda.save()
